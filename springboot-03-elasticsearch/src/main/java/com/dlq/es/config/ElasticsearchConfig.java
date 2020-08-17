@@ -1,0 +1,29 @@
+package com.dlq.es.config;
+
+import org.apache.http.HttpHost;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestHighLevelClient;
+import org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.elasticsearch.client.ClientConfiguration;
+
+/**
+ *@program: SpringBoot_Advanced
+ *@description:
+ *@author: Hasee
+ *@create: 2020-08-17 20:09
+ */
+@Configuration
+public class ElasticsearchConfig {
+
+    @Bean
+    public RestHighLevelClient restHighLevelClient(){
+        RestHighLevelClient client = new RestHighLevelClient(
+                RestClient.builder(
+                        new HttpHost("49.232.17.3", 9200, "http")));
+
+        return client;
+    }
+
+}
