@@ -8,7 +8,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
  *@author: Hasee
  *@create: 2020-08-17 19:23
  */
-//@Document(indexName = "dlqbbb",type = "book")
+@Document(indexName = "dlqbbb",type = "book")
 public class Book {
 
     private Integer id;

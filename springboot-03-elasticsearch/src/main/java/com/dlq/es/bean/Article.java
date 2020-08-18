@@ -16,6 +16,16 @@ public class Article {
     private String title;
     private String content;
 
+    public Article() {
+    }
+
+    public Article(Integer id, String author, String title, String content) {
+        this.id = id;
+        this.author = author;
+        this.title = title;
+        this.content = content;
+    }
+
     public Integer getId() {
         return id;
     }
