@@ -1,0 +1,15 @@
+server:
+  port: 8820
+
+spring:
+  application:
+    name: eureka-consumer-user
+
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的时候使用服务的ip地址
+  client:
+    register-with-eureka: true #是否把自己注册到eureka上
+    fetch-registry: true #是否从eureka上获取服务注册信息
+    service-url:
+      defaultZone: http://localhost:8801/eureka/
