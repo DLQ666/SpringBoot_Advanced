@@ -1,0 +1,17 @@
+management:
+  endpoints:
+    web:
+      base-path: /abc
+      exposure:
+        include: "*"
+  endpoint:
+    beans:
+      enabled: false
+    health:
+      show-details: always  #使用SpringBoot2.x中详细的健康信息是默认不显示的
+  server:
+    port: 8181
+spring:
+  redis:
+    host: 49.232.17.31
+
